@@ -7,7 +7,6 @@ require "ankusa/naive_bayes"
 require "colorize"
 
 class AutoTagger
-
   def initialize(document_path)
     @document_path = document_path
   end
@@ -26,7 +25,7 @@ class AutoTagger
     test_set = []
     puts "Splitting #{number_of_items} items into 10 parts of #{items_per_part} items each"
 
-    (1..10).each do |part|
+    (1..10).each do
       process_items_to = next_item_to_process + items_per_part
       puts "Splitting items #{next_item_to_process} to #{process_items_to - 1}"
 
@@ -60,7 +59,7 @@ class AutoTagger
 
     test_set.each do |item|
       likely_tags = classifier.log_likelihoods item[2]
-      most_likely_tag = likely_tags.sort_by{|_key, value| value}.reverse[0][0]
+      most_likely_tag = likely_tags.sort_by { |_key, value| value }.reverse[0][0]
 
       # Print the results of each classification
       if item[1] == most_likely_tag

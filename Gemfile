@@ -4,6 +4,7 @@ ruby "2.2.3"
 gem "rails"
 gem "ankusa"
 gem "colorize"
+gem "govuk-lint"
 
 group :test do
   gem "guard"
