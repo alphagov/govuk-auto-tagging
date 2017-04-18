@@ -1,6 +1,6 @@
 # AutoTagger
 
-##What is it?
+## What is it?
 
 This is an experimental automatic content tagger for GOV.UK pages
 based on the [Ankusa](https://github.com/bmuller/ankusa) gem, using
@@ -9,7 +9,7 @@ the naive Bayes algorithm.
 It attempts to determine correct tags for a page by learning
 from other, manually tagged pages.
 
-##How to use it?
+## How to use it?
 To run the script locally, run `./bin/tag.rb file_name` in your
 command line.
 
